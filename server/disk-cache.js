@@ -101,7 +101,8 @@ function ensureFileIsLocal(filename, cb) {
         var command = "aws s3 cp s3://WWSSN_Scans/" + filename + " --region us-east-1 --profile seismo " + escape(path);
 
         if (process.env.NODE_ENV !== "production") {
-          command = "wget http://s3.amazonaws.com/WWSSN_Scans/" + filename + " -O " + escape(path);
+          // command = "wget http://s3.amazonaws.com/WWSSN_Scans/" + filename + " -O " + escape(path);
+          command = `cp /home/dockimble/Projects/SKATE/seismogram-app/in/${filename} ${escape(path)}`;
         }
 
         console.log(command);
