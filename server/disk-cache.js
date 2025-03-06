@@ -102,7 +102,7 @@ function ensureFileIsLocal(filename, cb) {
 
         if (process.env.NODE_ENV !== "production") {
           // command = "wget http://s3.amazonaws.com/WWSSN_Scans/" + filename + " -O " + escape(path);
-          command = `cp /home/dockimble/Projects/SKATE/seismogram-app/in/${filename} ${escape(path)}`;
+          command = `cp /home/dockimble/Projects/SKATE/seismogram-pipeline/in/${filename} ${escape(path)}`;
         }
 
         console.log(command);

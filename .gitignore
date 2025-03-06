@@ -8,3 +8,4 @@ client/metadata
 client/edited-metadata
 client/logs
 db
+client/wwssn-metadata/*
